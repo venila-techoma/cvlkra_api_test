@@ -48,18 +48,18 @@ def soap_get_password_order(client):
 
 def soap_get_pan(client, pass_dict):
     # import pdb ; pdb.set_trace()
-    method_url = "https://pancheck.www.kracvl.com/ICVLPanInquiry/GetPanStatus"
-    svc_url = 'https://pancheck.www.kracvl.com/CVLPanInquiry.svc'
+    method_url = "**************"
+    svc_url = '***************'
     # import pdb ; pdb.set_trace()
     # client.service._binding_options['address'] = 'https://pancheck.www.kracvl.com/CVLPanInquiry.svc'
     header_value = soap_set_wsa_headers(method_url, svc_url)
 
     response = client.service.GetPanStatus(
-        panNo='AAAPA0001Y',
+        panNo='*******',
         # AAACN6682J
         # AJSPB1234T
-        userName='WEBADMIN',
-        posCode='5100147231',
+        userName='*******',
+        posCode='*******',
         password=pass_dict.get('password'),
         passKey=pass_dict.get('passkey'),
         _soapheaders=[header_value])
